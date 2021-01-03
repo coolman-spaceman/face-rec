@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Attendance management dashboard</title>
+	<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+}
+</style>
+</head>
+<body>
+<h1><center> Welcome To Attendance Management Dashboard</center><h1> 
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Time</th>
+  </tr>
+
+  {% for key, value in dicts.items() %}
+   <tr>
+        <td  style="background-color:blue;color:white;" > {{ key }} </td>
+        <td  > {{ value }} </td>
+   </tr>
+{% endfor %}
+
+</table>
+
+<form action = '/face_rec' method = "post">
+ <center> <input type="submit" value= "Give your attendance">  </center>
+</form>
+
+</body>
+</html>
